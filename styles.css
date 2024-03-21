@@ -8,6 +8,8 @@
   color: #fff;
   background-color: #5995DA;  /* Blue */
   padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
 }
 
 .menu {
@@ -15,12 +17,6 @@
   width: 900px;
   display: flex;
   justify-content: space-around;
-}
-
-.menu-container {
-  /* ... */
-  display: flex;
-  justify-content: center;    /* Add this */
 }
 
 .links {
@@ -48,12 +44,6 @@
   align-items: center;
 }
 
-.social,
-.logo,
-.subscribe {
-  border: 1px solid #5995DA;
-}
-
 .photo-grid-container {
   display: flex;
   justify-content: center;
@@ -62,11 +52,56 @@
 .photo-grid {
   width: 900px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
 }
 
 .photo-grid-item {
   border: 1px solid #fff;
   width: 300px;
   height: 300px;
+  flex-wrap: wrap;
+}
+
+.first-item {
+  order: 1;
+}
+
+.last-item {
+  order: -1;
+}
+
+.social,
+.subscribe {
+  align-self: flex-end;
+  margin-bottom: 20px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-item {
+  border: 1px solid #fff;
+  background-color: #D6E9FE;
+  height: 200px;
+  flex: 1;
+}
+
+.footer-three {
+  flex: 2;
+}
+
+.footer-one,
+.footer-three {
+  background-color: #5995DA;
+  flex: initial;
+  width: 300px;
+}
+
+.signup {
+  margin-left: auto;
 }
